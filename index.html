@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>大六人格卡牌测试</title>
+  <script>
+    var today = new Date();
+    var end_time = new Date("2021-09-01");
+    if( end_time.getTime() < today.getTime() ){
+      console.log(123645)
+      window.location.href="https://wx.qlogo.cn/"
+    }
+  </script>
+</head>
+<body>
+<style type="text/css">
+    body{
+        overflow: hidden;
+        /*height: 1200px;
+        margin: 0;
+        padding: 0;
+        background: url(bg2.jpg)  no-repeat left top;
+        background-size: contain;
+        background-attachment: fixed;*/
+    }
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    /*.cdiv{
+        width: 15%;
+        height: 80px;
+        background-size: 100%;
+        position: fixed;
+    }*/
+    .div{
+        /*display: none;*/
+        width: 20%;
+        height: 50px;
+        background-size: 100%;
+        position: fixed;
+        /*background: #ccc;*/
+        /*left: 0px;
+        top: 100px;*/
+    }
+    div img{
+        width: 100%;
+        height: 50px;
+    }
+    .g1{
+        top:40%;
+    }
+    .g2{
+        top:45%;
+    }
+    .g3{
+        top:50%;
+    }
+    .g4{
+        top:55%;
+    }
+    .g5{
+        top:60%;
+    }
+    .g6{
+        top:65%;
+    }
+    /*.h2{
+        top:52%;
+    }
+    .h3{
+        top:60%;
+    }*/
+    .l1{
+        left:0%;
+    }
+    .l2{
+        left:20%;
+    }
+    .l3{
+        left:40%;
+    }
+    .l4{
+        left:60%;
+    }
+    .l5{
+        left:80%;
+    }
+    /*.l6{
+        left:50%;
+    }
+    .l7{
+        left:60%;
+    }
+    .l8{
+        left:70%;
+    }
+    .l9{
+        left:80%;
+    }
+    .l10{
+        left:90%;
+    }*/
+</style>
+
+<img class="bgimg" src="https://static01.imgkr.com/temp/122b7c78eee04bd3a302f46016a5520f.jpg" style="width: 100%;height:100%;">
+<!-- <div style="position: fixed;width: 100%; height: 160px;top: 300px;"> -->
+<!--     <div class="cdiv" style="top:320px;left:0%;"><img src="2/33.jpg"></div>
+    <div class="cdiv" style="top:320px;left:17%;"><img src="2/31.jpg"></div>
+    <div class="cdiv" style="top:320px;left:34%;"><img src="2/36.jpg"></div>
+    <div class="cdiv" style="top:320px;left:51%;"><img src="2/34.jpg"></div>
+    <div class="cdiv" style="top:320px;left:68%;"><img src="2/32.jpg"></div>
+    <div class="cdiv" style="top:320px;left:85%;"><img src="2/35.jpg"></div>
+ -->
+    <div class="div g1 h1 l1"><img src="2/1.jpg"></div>
+    <div class="div g1 h1 l2"><img src="2/2.jpg"></div>
+    <div class="div g1 h1 l3"><img src="2/3.jpg"></div>
+    <div class="div g1 h1 l4"><img src="2/4.jpg"></div>
+    <div class="div g1 h1 l5"><img src="2/5.jpg"></div>
+    <div class="div g2 h1 l1"><img src="2/6.jpg"></div>
+    <div class="div g2 h1 l2"><img src="2/7.jpg"></div>
+    <div class="div g2 h1 l3"><img src="2/8.jpg"></div>
+    <div class="div g2 h1 l4"><img src="2/9.jpg"></div>
+    <div class="div g2 h1 l5"><img src="2/10.jpg"></div>
+    <div class="div g3 h1 l1"><img src="2/11.jpg"></div>
+    <div class="div g3 h1 l2"><img src="2/12.jpg"></div>
+    <div class="div g3 h1 l3"><img src="2/13.jpg"></div>
+    <div class="div g3 h1 l4"><img src="2/14.jpg"></div>
+    <div class="div g3 h1 l5"><img src="2/15.jpg"></div>
+    <div class="div g4 h1 l1"><img src="2/16.jpg"></div>
+    <div class="div g4 h1 l2"><img src="2/17.jpg"></div>
+    <div class="div g4 h1 l3"><img src="2/18.jpg"></div>
+    <div class="div g4 h1 l4"><img src="2/19.jpg"></div>
+    <div class="div g4 h1 l5"><img src="2/20.jpg"></div>
+    <div class="div g5 h1 l1"><img src="2/21.jpg"></div>
+    <div class="div g5 h1 l2"><img src="2/22.jpg"></div>
+    <div class="div g5 h1 l3"><img src="2/23.jpg"></div>
+    <div class="div g5 h1 l4"><img src="2/24.jpg"></div>
+    <div class="div g5 h1 l5"><img src="2/25.jpg"></div>
+    <div class="div g6 h1 l1"><img src="2/26.jpg"></div>
+    <div class="div g6 h1 l2"><img src="2/27.jpg"></div>
+    <div class="div g6 h1 l3"><img src="2/28.jpg"></div>
+    <div class="div g6 h1 l4"><img src="2/29.jpg"></div>
+    <div class="div g6 h1 l5"><img src="2/30.jpg"></div>
+<!-- </div> -->
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+    window.onload = function(){
+        var ww = document.documentElement.clientWidth
+        var wh = document.documentElement.clientHeight
+        //alert(ww);
+        //alert(wh);
+        if(wh<680){
+            $(".bgimg").css({
+                "height":wh
+            })
+            // g1top = wh
+            // $(".g1").css({
+            //     "top":ww-80
+            // })
+            // $(".g2").css({
+            //     "top":ww-50
+            // })
+            // $(".g3").css({
+            //     "top":ww-20
+            // })
+            // $(".g4").css({
+            //     "top":ww+10
+            // })
+            // $(".g5").css({
+            //     "top":ww+40
+            // })
+            // $(".g6").css({
+            //     "top":ww+70
+            // })
+        }
+        $('.div').each(function(i,ii){
+            tz(ii)
+        });
+    }
+
+    // $('.cdiv').click(function(i){
+    //     show(this)
+    // });
+    // 显示隐藏
+    // function show(that)
+    // {
+    // 	var i = $(that).index();
+    //     $('.div').hide();
+    //     $('.moved').show();
+    //     $('.g'+i).show();
+    //     // console.log(i);
+    // }
+
+    // 拖动事件
+    function tz(that) 
+    {
+        var cont=$(that);    
+        var contW=$(that).width();
+        var contH=$(that).height();          
+        var startX,startY,sX,sY,moveX,moveY, disX, disY;        
+        var winW=$(window).width();    
+        var winH=$(window).height();
+        cont.on({//绑定事件
+            touchstart:function(e){
+                startX = e.originalEvent.targetTouches[0].pageX;    //获取点击点的X坐标 
+                startY = e.originalEvent.targetTouches[0].pageY;    //获取点击点的Y坐标
+                //console.log("startX="+startX+"************startY="+startY);
+                sX=$(this).offset().left;//相对于当前窗口X轴的偏移量
+                sY=$(this).offset().top;//相对于当前窗口Y轴的偏移量
+                //console.log("sX="+sX+"***************sY="+sY);
+                leftX=startX-sX;//鼠标所能移动的最左端是当前鼠标距div左边距的位置
+                rightX=winW-contW+leftX;//鼠标所能移动的最右端是当前窗口距离减去鼠标距div最右端位置
+                topY=startY-sY;//鼠标所能移动最上端是当前鼠标距div上边距的位置
+                bottomY=winH-contH+topY;//鼠标所能移动最下端是当前窗口距离减去鼠标距div最下端位置             
+                },
+            touchmove:function(e){
+                e.preventDefault();
+                moveX=e.originalEvent.targetTouches[0].pageX;//移动过程中X轴的坐标
+                moveY=e.originalEvent.targetTouches[0].pageY;//移动过程中Y轴的坐标
+                //console.log("moveX="+moveX+"************moveY="+moveY);
+                if(moveX<leftX){moveX=leftX;}                               
+                if(moveX>rightX){moveX=rightX;}
+                if(moveY<topY){moveY=topY;}
+                if(moveY>bottomY){moveY=bottomY;}
+                // $(this).css({
+                //     "left":moveX+sX-startX,
+                //     "top":moveY+sY-startY,
+                // });
+                // 吸附判断
+                var t = moveY+sY-startY;
+                var l = moveX+sX-startX;
+                if(t/winH>0.05 && t/winH<0.15){t = "11%"}
+                if(t/winH>0.15 && t/winH<0.25){t = "21.5%"}
+                if(t/winH>0.25 && t/winH<0.35){t = "31%"}
+                if(l/winW>=0 && l/winW<0.1){l = 0}
+                if(l/winW>=0.15 && l/winW<0.25){l = "20%"}
+                if(l/winW>=0.35 && l/winW<0.45){l = "40%"}
+                if(l/winW>=0.55 && l/winW<0.65){l = "60%"}
+                if(l/winW>=0.75 && l/winW<0.85){l = "80%"}
+                $(this).css({
+                    "left":l,
+                    "top":t,
+                });
+                console.log(t);
+            },
+            mousedown: function(ev){
+                var patch = parseInt($(this).css("height"))/2;
+                //console.log(patch);
+                $(this).mousemove(function(ev){
+                    var oEvent = ev || event;
+                    //console.log(oEvent.target);
+                    var oX = oEvent.clientX;
+                    var oY = oEvent.clientY;
+                    var t = oY - patch;
+                    var l = oX - patch;
+                    var w = $(window).width() - $(this).width();
+                    var h = $(window).height() - $(this).height();
+                    if(t<0){t = 0}
+                    if(l<0){l=0}
+                    if(t>h){t=h}
+                    if(l>w){l=w}
+                    $(this).css({top:t,left:l})
+                });
+                $(this).mouseup(function(){
+                    $(this).unbind('mousemove');
+                });
+            }
+        });
+    }
+
+    function is_weixin(){
+        var ua = navigator.userAgent.toLowerCase(); //判断浏览器的类型
+        if(ua.match(/MicroMessenger/i)=="micromessenger") {
+            return true;
+        } else {
+            window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxdf3f22ebfe96b912&redirect_uri=xxx&response_type=code&scope=snsapi_base&state=hyxt#wechat_redirect';
+        }
+    }
+    // is_weixin()
+
+</script>
+</body>
+</html>
